@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+}
+
+.map div {
+  width: 100vw;
+  height: 100vh;
+}
+
+.sideBar-content {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  background-color: white;
+  height: 100vh;
+  width: 300px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sideBar-content.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.sideBar-content button {
+  display: block;
+  margin: 8px 0;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
